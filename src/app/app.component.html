@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizApp</title>
+</head>
+<body>
+<h1>Quiz App</h1>
+<h3>Which of the following is your favourite</h3>
+<div *ngFor="let item of list">
+  <input type="radio" name="item" value = "{{item}}" (change)="onRadioChange($event)">
+  <label>{{item}}</label>
+</div>
+<p>Your choice : <b>{{choice}}</b></p>
+<!-- <input type="radio" name="options" value="HTML">HTML<br> -->
+
+</body>
+</html>
