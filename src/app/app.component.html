@@ -13,19 +13,18 @@
     <!-- <label [attr.for] = "i.id" >
       <input type="radio" id="{{i.id}}" [(ngModel)]="i.select", (change)="onRadioChange($event)" >{{i.value}}
     </label> -->
-    <input type="radio" [value]="i.value" name="option" id="i.id" (ngmodel)="i.select" [checked]="i.select"  (change)="onRadioChange($event, item.id)">
+    <input type="radio" [value]="i.value" name="option" id="i.id" (change)="onRadioChange($event, item.id)">
   <label>{{i.value}}</label>
   </div>
 </div>
 
 <div>
-  <input type="submit" value="submit">
+  <input type="submit" value="submit" (click)="onSubmit($event)">
 </div>
 
 <div *ngFor="let item of choiceArray">
   <p>Your choice : <b>{{item}}</b></p>
 </div>
-<!-- <input type="radio" name="options" value="HTML">HTML<br> -->
 
 </body>
 </html>
