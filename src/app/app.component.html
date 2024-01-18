@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuizApp</title>
+  <link rel="stylesheet" href="app.component.scss">
 </head>
 <body>
-<h1>Quiz App</h1>
+<h1>Angular Quiz</h1>
 <div *ngFor="let item of arr">
-  <p>{{item.question}}</p>
-  <div *ngFor="let i of item.options">
+  <p>Q{{item.id}}. {{item.question}}</p>
+  <div *ngFor="let i of item.options" class="multi">
     <!-- <label [attr.for] = "i.id" >
       <input type="radio" id="{{i.id}}" [(ngModel)]="i.select", (change)="onRadioChange($event)" >{{i.value}}
     </label> -->
@@ -19,7 +20,7 @@
 </div>
 
 <div>
-  <input type="submit" value="submit" (click)="onSubmit($event)">
+  <input type="submit" value="submit" id="submit" (click)="onSubmit($event)">
 </div>
 
 <div *ngFor="let item of choiceArray">
