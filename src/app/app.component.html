@@ -14,7 +14,7 @@
     <!-- <label [attr.for] = "i.id" >
       <input type="radio" id="{{i.id}}" [(ngModel)]="i.select", (change)="onRadioChange($event)" >{{i.value}}
     </label> -->
-    <input type="radio" [value]="i.value" name="option" id="i.id" (change)="onRadioChange($event, item.id)">
+    <input type="radio" [value]="i.value" [name]="item.id" id="i.id" (change)="onRadioChange($event, item.id)">
   <label>{{i.value}}</label>
   </div>
 </div>
